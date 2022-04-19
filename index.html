@@ -21,7 +21,7 @@
     />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <title>Furnate</title>
+    <title>Furnate | Home</title>
   </head>
   <body>
     <!-- landing page -->
@@ -34,9 +34,9 @@
         </button>
         <ul class="nav-list" id="nav-ul">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Couch</a></li>
-          <li><a href="#">Beds</a></li>
-          <li><a href="#">Accessories</a></li>
+          <li><a href="#couch">Couch</a></li>
+          <li><a href="#beds">Beds</a></li>
+          <li><a href="#accessories">Accessories</a></li>
         </ul>
       </nav>
       <main class="landing">
@@ -44,7 +44,7 @@
           <span class="lobster">Furniture</span> and
           <span class="lobster">household</span> accessories
         </h1>
-        <a class="link-cta" href="#"
+        <a class="link-cta" href="#couch"
           >Catalog
           <span class="arrow"><i class="fa-solid fa-arrow-down-long"></i></span
         ></a>
@@ -52,13 +52,61 @@
     </header>
 
     <!-- Catalog -->
-    <section id="couch" class="couch"></section>
+    <section id="couch" class="catalogs-section couch">
+      <div class="container">
+        <div class="content-type">
+          <h1 class="display-1">Premium Couch</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            deserunt natus earum assumenda dolores amet? Harum sint dicta
+            placeat cum?
+          </p>
+          <a href="catalog/couch.html" class="btn">Couches</a>
+        </div>
+        <img class="content-img" src="assets/couch-catalog.jpg" alt="" />
+      </div>
+    </section>
 
     <!-- beds -->
-    <section id="beds" class="beds"></section>
+    <section id="beds" class="catalogs-section beds">
+      <div class="container">
+        <img
+          class="content-img middle-img"
+          src="assets/bed-catalog.jpg"
+          alt=""
+        />
+        <div class="content-type">
+          <h1 class="display-1">Beds</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            deserunt natus earum assumenda dolores amet? Harum sint dicta
+            placeat cum?
+          </p>
+          <a href="catalog/bed.html" class="btn">Beds</a>
+        </div>
+      </div>
+    </section>
 
     <!-- accessories -->
-    <section id="accessories" class="accessories"></section>
+    <section id="accessories" class="catalogs-section accessories">
+      <div class="container">
+        <div class="content-type">
+          <h1 class="display-1">Household Accessories</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            corrupti eaque, minima, rem labore nulla repellendus a, recusandae
+            id autem expedita consequatur qui odio quae. Quos veritatis
+            voluptatibus assumenda earum natus, quo totam pariatur quasi animi,
+            nulla tempora quia. Distinctio similique sint dolorum. Molestias non
+            eum veritatis reprehenderit quidem totam.
+          </p>
+          <a target="_blank" href="catalog/accessories.html" class="btn"
+            >Accessories</a
+          >
+        </div>
+        <img class="content-img" src="assets/accessories-catalog.jpg" alt="" />
+      </div>
+    </section>
 
     <!-- js -->
     <script src="main.js"></script>
