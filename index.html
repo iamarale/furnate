@@ -8,14 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+Pro:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
     <title>Furnate</title>
   </head>
   <body>
-    <!-- jquery -->
+    <!-- landing page -->
+    <header>
+      <nav class="nav">
+        <h1 class="logo">FURNATE</h1>
+        <button class="hamburger" id="hamburger">
+          <i class="menu menu-open fas fa-bars"></i>
+          <i class="menu menu-closed fa-solid fa-x"></i>
+        </button>
+        <ul class="nav-list" id="nav-ul">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Couch</a></li>
+          <li><a href="#">Beds</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </nav>
+      <main class="landing">
+        <h1>
+          <span class="lobster">Furniture</span> and
+          <span class="lobster">household</span> accessories
+        </h1>
+        <a class="link-cta" href="#"
+          >Catalog
+          <span class="arrow"><i class="fa-solid fa-arrow-down-long"></i></span
+        ></a>
+      </main>
+    </header>
+
+    <!-- Catalog -->
+    <section id="couch" class="couch"></section>
+
+    <!-- beds -->
+    <section id="beds" class="beds"></section>
+
+    <!-- accessories -->
+    <section id="accessories" class="accessories"></section>
+
+    <!-- js -->
+    <script src="main.js"></script>
   </body>
 </html>
