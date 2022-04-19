@@ -175,6 +175,27 @@ header main {
 .btn:hover {
   transform: scale(0.95);
 }
+/* footer */
+footer {
+  background: var(--primary-clr);
+}
+footer h1 {
+  color: var(--neutral-gray);
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.footer-nav {
+  display: flex;
+}
+footer li {
+  margin: 0 0.5rem;
+}
 
 /* media queries and keyframes */
 @keyframes bounce {
@@ -213,7 +234,11 @@ header main {
   .landing h1 {
     font-size: 3rem;
   }
+  .footer-nav {
+    display: block;
+  }
 }
+
 /* laptops */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .landing .link-cta {
