@@ -9,6 +9,7 @@
   --neutral-light-gray: hsl(0, 0%, 89%);
   --neutral-gray: hsl(60, 2%, 74%);
   --neutral-dark-gray: hsl(60, 1%, 35%);
+  --neutral-white: hsl(0, 0%, 99%);
 
   /* fonts */
   --lobster: "Lobster", cursive;
@@ -16,6 +17,9 @@
 }
 body {
   font-family: var(--source-sans-pro);
+}
+html {
+  scroll-behavior: smooth;
 }
 i {
   font-size: 2rem;
@@ -25,7 +29,6 @@ i {
   color: var(--primary-clr);
 }
 /* resets */
-
 ul {
   list-style: none;
 }
@@ -36,6 +39,21 @@ a {
 }
 a:hover {
   color: var(--neutral-dark-gray);
+}
+img {
+  max-width: 100%;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary-clr);
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+.btn:hover {
+  color: var(--neutral-dark-gray);
+  background: var(--neutral-light-gray);
 }
 /* header */
 header {
@@ -52,6 +70,12 @@ header {
   color: var(--neutral-light-gray);
   cursor: pointer;
   font-size: 1.25rem;
+}
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
 }
 .nav {
   display: flex;
@@ -74,9 +98,9 @@ header {
 }
 header main {
   background: url("assets/landing-couch.jpg");
-  background-position: bottom center;
+  background-position: center;
   background-size: cover;
-  height: 90vh;
+  height: 89.3vh;
 }
 .landing h1 {
   font-size: 5rem;
@@ -84,28 +108,92 @@ header main {
   padding-top: 7rem;
   color: var(--secondary-clr);
 }
+.landing span {
+  color: var(--neutral-dark-gray);
+}
 .landing .link-cta {
   font-size: 2.5rem;
-  background: var(--neutral-light-gray);
+  background: var(--neutral-white);
   color: var(--primary-clr);
   padding: 1rem 1.5rem;
   position: absolute;
   left: 0;
   bottom: 0;
-
+  border-top-right-radius: 0.5rem;
   border: 1px solid var(--primary-clr);
+  display: flex;
+  align-items: center;
 }
-.rotated {
-  transform: rotate(50deg);
-}
-.visible {
+.arrow {
+  animation: bounce 2s 4 ease-in-out;
   display: block;
+  padding: 0 1rem;
 }
-.hidden {
-  display: none;
-}
-/* media queries */
 
+/* catalog sections */
+.catalogs-section {
+  display: flex;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: Center;
+  margin: 4rem auto;
+  max-width: 60%;
+}
+.content-type {
+  height: 100%;
+  padding-right: 10rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+.btn {
+  align-self: flex-start;
+}
+.content-type h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--neutral-dark-gray);
+}
+.content-type p {
+  line-height: 1.5;
+  padding-top: 1.5rem;
+}
+.content-img {
+  width: 600px;
+  border-radius: 0.3rem;
+}
+.container img,
+.btn {
+  transition: transform 0.3s ease;
+}
+.container img:hover,
+.btn:hover {
+  transform: scale(0.95);
+}
+
+/* media queries and keyframes */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* mobile */
 @media screen and (max-width: 767px) {
   .nav-list {
     display: none;
@@ -119,8 +207,21 @@ header main {
   .nav-list .show {
     display: flex;
   }
-
   .hamburger {
     display: block;
+  }
+  .landing h1 {
+    font-size: 3rem;
+  }
+}
+/* laptops */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .landing .link-cta {
+    padding: 1rem 1.5rem;
+    margin: 0;
+  }
+
+  .arrow {
+    padding: 0 0.5rem;
   }
 }
