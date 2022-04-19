@@ -3,7 +3,124 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-clr: hsl(249, 15%, 16%);
+  --secondary-clr: hsl(249, 9%, 16%);
+  --neutral-light-gray: hsl(0, 0%, 89%);
+  --neutral-gray: hsl(60, 2%, 74%);
+  --neutral-dark-gray: hsl(60, 1%, 35%);
 
+  /* fonts */
+  --lobster: "Lobster", cursive;
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+}
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--source-sans-pro);
+}
+i {
+  font-size: 2rem;
+}
+.lobster {
+  font-family: var(--lobster);
+  color: var(--primary-clr);
+}
+/* resets */
+
+ul {
+  list-style: none;
+}
+a {
+  color: var(--neutral-light-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--neutral-dark-gray);
+}
+/* header */
+header {
+  background: var(--primary-clr);
+}
+.logo {
+  color: var(--neutral-light-gray);
+  font-family: var(--lobster);
+}
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  color: var(--neutral-light-gray);
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0rem auto;
+  padding: 2rem 0;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: Wrap;
+}
+.nav-list li {
+  margin-left: 0.5rem;
+  font-size: 1.15rem;
+  margin: 0.5rem;
+}
+header main {
+  background: url("assets/landing-couch.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  height: 90vh;
+}
+.landing h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 7rem;
+  color: var(--secondary-clr);
+}
+.landing .link-cta {
+  font-size: 2.5rem;
+  background: var(--neutral-light-gray);
+  color: var(--primary-clr);
+  padding: 1rem 1.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  border: 1px solid var(--primary-clr);
+}
+.rotated {
+  transform: rotate(50deg);
+}
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+/* media queries */
+
+@media screen and (max-width: 767px) {
+  .nav-list {
+    display: none;
+    width: 100%;
+  }
+  .nav-list.show {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .nav-list .show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
